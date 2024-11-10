@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Definición de la codificación de caracteres y viewport para diseño responsivo -->
+    <meta charset="UTF-8">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portafolio</title>
+    <!-- Enlace a archivos CSS externos (Bootstrap y Font Awesome) para estilos y iconos -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
 
+    <!-- Sección de encabezado con el nombre y la descripción del portafolio -->
 <header id="header" class="bg-primary text-white text-center py-3">
     <h1 id="nombre">Gabriel Espinoza</h1>
     <p id="descripcion">Estudiante de Ingeniería en Sistemas</p>
 </header>
 
+    <!-- Barra lateral de navegación con enlaces a diferentes secciones -->
 <div class="d-flex">
     <nav id="sidebar" class="bg-dark text-white p-3" style="width: 100px;">
         <ul class="nav flex-column">
+            <!-- Enlaces de navegación para cada sección con iconos de FontAwesome -->
             <li class="nav-item">
                 <a href="#" class="nav-link text-white" onclick="mostrarSeccion('inicio')" title="Inicio">
                     <i class="fas fa-home"></i>
@@ -46,17 +52,21 @@
         </ul>
     </nav>
 
+    <!-- Contenido principal de las secciones -->
     <main class="container content">
+        <!-- Sección de inicio -->
         <section id="inicio" class="seccion">
             <h2>Bienvenido a mi Portafolio</h2>
             <p>Primer intento de portafolio Web, incluye toda la información necesaria sobre mis habilidades en el área de programación. Navega por las secciones usando la barra lateral para conocer más sobre mis proyectos, habilidades y formas de contacto.</p>
         </section>
 
+        <!-- Sección de perfil con una foto y descripción -->
         <section id="perfil" class="seccion d-none">
             <h2>Sobre Mí</h2>
             <img src="img/perfil3.jpg" alt="Foto de perfil" class="perfil-img rounded-circle mt-3">
             <p class="mt-3">Soy Gabriel Espinoza, un estudiante de ingeniería en sistemas. Apasionado con la programación y resolución de problemas, aunque llevo pocos proyectos, poco a poco voy aumentando más.</p>
 
+            <!-- Enlaces a redes sociales -->
             <div class="social-icons mt-4">
                 <a href="https://www.instagram.com/gabyesa845" class="btn btn-social-icon btn-instagram" target="_blank">
                     <i class="fab fa-instagram"></i>
@@ -70,6 +80,7 @@
             </div>
         </section>
 
+        <!-- Sección de proyectos con tarjetas para cada uno -->
         <section id="proyectos" class="seccion d-none">
             <h2>Mis Proyectos</h2>
             <div class="row">
@@ -100,6 +111,7 @@
             </div>
         </section>
 
+        <!-- Sección de habilidades con lista de tecnologías -->
         <section id="habilidades" class="seccion d-none">
             <h2>Habilidades</h2>
             <ul class="list-group list-group-flush">
@@ -110,9 +122,11 @@
             </ul>
         </section>
 
+        <!-- Sección de contacto con formulario para enviar un mensaje -->
         <section id="contacto" class="seccion d-none">
             <h2>Contacto</h2>
             <form id="formContacto" class="p-4 border rounded">
+                <!-- Campos del formulario: nombre, correo y mensaje -->
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
                     <input type="text" class="form-control" id="nombre" name="nombre" required>
@@ -131,14 +145,19 @@
     </main>
 </div>
 
+<!-- Sección de pie de página -->
 <footer id="footer" class="bg-dark text-white text-center py-3">
     <p>&copy; 2024 Mi Portafolio. Derechos reservados.</p>
 </footer>
 
+<!-- Scripts de jQuery y Bootstrap -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Funciones JavaScript para manejar la visualización de secciones y el formulario -->
 <script>
+    // Función para mostrar la sección seleccionada y ocultar las demás
     function mostrarSeccion(seccionId) {
         let secciones = document.querySelectorAll('.seccion');
         secciones.forEach(function(seccion) {
@@ -147,11 +166,13 @@
         document.getElementById(seccionId).classList.remove('d-none');
     }
 
+    // Función para guardar el formulario de contacto
     function guardarFormulario() {
         let nombre = document.getElementById('nombre').value;
         let correo = document.getElementById('correo').value;
         let mensaje = document.getElementById('mensaje').value;
 
+        // Verifica que todos los campos estén completos
         if (nombre && correo && mensaje) {
             alert("Formulario guardado correctamente!");
         } else {

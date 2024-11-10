@@ -1,3 +1,4 @@
+/* Estilos básicos para el cuerpo de la página */
 body {
     font-family: Arial, sans-serif;
     color: #333;
@@ -7,28 +8,34 @@ body {
     margin: 0;
 }
 
+/* Estilos para los títulos */
 h1, h2 {
     color: #0b4d94;
 }
 
+/* Estilos para los párrafos y elementos de lista */
 p, .list-group-item {
     font-size: 1.1em;
 }
 
+/* Estilos para la imagen de perfil */
 .perfil-img {
     width: 150px;
     height: 150px;
 }
 
+/* Ajustes de estilo para el texto en el perfil */
 #perfil p {
     max-width: 600px;
     margin: auto;
 }
 
+/* Estilos para las etiquetas de formulario en la sección de contacto */
 #contacto .form-group label {
     font-weight: bold;
 }
 
+/* Estilos para los enlaces de la barra de navegación */
 .nav-link {
     display: flex;
     align-items: center;
@@ -58,6 +65,7 @@ p, .list-group-item {
     max-width: 600px;
 }
 
+/* Estilos para el pie de página */
 footer {
     background-color: #343a40;
     color: white;
